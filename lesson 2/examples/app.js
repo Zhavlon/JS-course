@@ -1,30 +1,16 @@
-const btns = document.querySelectorAll('button')
-const wrapper = document.querySelector('.btn-block')
-
-// btns.forEach(item => {
-// 	item.addEventListener('click', (event) => {
-// 		if(event.target.classList.contains('red')){
-// 			event.target.classList.remove('red')
-// 		} else {
-// 			event.target.classList.add('red')
-// 		}
-// 	})
-// })
+const text = document.querySelector('.test')
 
 
+const regDis = /\(Discount/g
+const idx = text.textContent.search(regDis)
 
-wrapper.addEventListener('click', (event) => {
-	if (event.target.tagName === 'BUTTON') {
-		if (event.target.classList.contains('red')) {
-			event.target.classList.remove('red')
-		} else {
-			event.target.classList.add('red')
-		}
-	}
-})
+const before = text.textContent.slice(0, idx)
+const after = text.textContent.slice(idx)
 
+let newText = before + '/' + after
 
-const newBtn = document.createElement('button')
-const newBtn2 = document.createElement('button')
-newBtn2.classList.add('red')
+const regExp = /\//g
 
+newText = newText.replaceAll(regExp, '<br>')
+
+text.innerHTML = newText

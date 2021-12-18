@@ -121,7 +121,7 @@ function setClock(element, deadline) {
 
 
 	function makeZero(num) {
-		if(num > 0 && num < 10) {
+		if (num > 0 && num < 10) {
 			return `0${num}`
 		} else {
 			return num
@@ -138,6 +138,7 @@ function setClock(element, deadline) {
 }
 
 setClock('.timer', deadline)
+
 // card
 
 
