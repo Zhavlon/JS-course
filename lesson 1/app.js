@@ -141,8 +141,3 @@
 // 	if(position > 400) return
 // 	setTimeout(animate, 20)
 // }
-
-
-
-
-let arr = [1,2,3];
